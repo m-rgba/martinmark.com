@@ -9,6 +9,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <script>
+    // Heavy handed warn removal for MVPs
+    console.warn = () => {};
+    // PostHog Init
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_iHTSJB41qmv87bAyL5ORU5KAoq1cZjlq1L972LnB739',{api_host:'https://app.posthog.com'})
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Overpass+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,6 +24,7 @@
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <script>
+    // Tailwind Config
     tailwind.config = {
       darkMode: 'class',
       theme: {
@@ -64,8 +73,8 @@
 
   <div class="flex justify-center w-full">
     <div class="bg-slate-50 shadow-lg w-full p-6 pb-28 xl:pb-6 xl:w-1/2 xl:rounded-sm xl:mt-12 xl:mb-28 dark:bg-slate-900 print:bg-white print:shadow-none">
-      <div class="flex items-center mb-3">
-        <div class="dark:text-slate-50">
+      <div class="block sm:flex items-center mb-3">
+        <div class="dark:text-slate-50 mb-1 sm:mb-0">
           <h1 class="text-2xl">Martin Mark</h1>
           <p class="text-slate-500 text-sm dark:text-slate-400">Product Design & Direction</p>  
         </div>  
@@ -76,7 +85,7 @@
           </div>
           <div class="flex items-center">
             <svg class="w-4 h-full mr-1.5" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M22 12C22 10.6868 21.7413 9.38647 21.2388 8.1731C20.7362 6.95996 19.9997 5.85742 19.0711 4.92896C18.1425 4.00024 17.0401 3.26367 15.8268 2.76123C14.6136 2.25854 13.3132 2 12 2V4C13.0506 4 14.0909 4.20703 15.0615 4.60889C16.0321 5.01099 16.914 5.60034 17.6569 6.34326C18.3997 7.08594 18.989 7.96802 19.391 8.93848C19.7931 9.90918 20 10.9495 20 12H22Z" fill="currentColor"></path><path d="M2 10V5C2 4.44775 2.44772 4 3 4H8C8.55228 4 9 4.44775 9 5V9C9 9.55225 8.55228 10 8 10H6C6 14.4182 9.58173 18 14 18V16C14 15.4478 14.4477 15 15 15H19C19.5523 15 20 15.4478 20 16V21C20 21.5522 19.5523 22 19 22H14C7.37259 22 2 16.6274 2 10Z" fill="currentColor"></path><path d="M17.5433 9.70386C17.8448 10.4319 18 11.2122 18 12H16.2C16.2 11.4485 16.0914 10.9023 15.8803 10.3928C15.6692 9.88306 15.3599 9.42017 14.9698 9.03027C14.5798 8.64014 14.1169 8.33081 13.6073 8.11963C13.0977 7.90869 12.5515 7.80005 12 7.80005V6C12.7879 6 13.5681 6.15527 14.2961 6.45679C15.024 6.7583 15.6855 7.2002 16.2426 7.75732C16.7998 8.31445 17.2418 8.97583 17.5433 9.70386Z" fill="currentColor"></path></svg>
-            <p>+1 416-558-0815</p>
+            <p>+1 365-602-2664</p>
           </div>
         </div>
       </div>
@@ -177,11 +186,12 @@
           <div class="mb-6">
             <p class="text-slate-500 text-sm mb-1.5 dark:text-slate-400">Management</p>
             <div class="flex flex-wrap mb-1.5">
-              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Performance Management</p>
-              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Career Coaching</p>
-              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Design Ops</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Project Management</p>
               <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">KPIs & Planning</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Design Ops</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Career Coaching</p>
               <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Hiring</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Performance Management</p>
             </div> 
 
             <p class="text-slate-500 text-sm mb-1.5 dark:text-slate-400">Design</p>
@@ -210,6 +220,14 @@
           <div class="flex items-center text-xs text-slate-500 uppercase tracking-widest mb-1.5 -mt-1.5 font-medium font-mono dark:text-slate-400">
             <div class="w-3 border-t border-slate-500 mr-1.5 dark:border-slate-400"></div>
             <p class="mt-0.5">Extracurriculars</p>
+          </div>
+
+          <div class="mb-3">
+            <p class="dark:text-slate-50">HasuraCon '22 MC</p>
+            <div class="flex items-center font-mono font-medium text-xs mt-0.5 dark:text-slate-50">
+              <p class="">Hasura</p>
+              <p class="ml-auto">2022</p>
+            </div>
           </div>
 
           <div class="mb-3">
