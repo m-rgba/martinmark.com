@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<!-- Resume Landing Page -->
+<head>
+  <title>Martin Mark - Resume - Product Design & Direction</title>
+	<meta name="description" content="Hi there, I'm Martin, a product designer and director from Toronto. This is my resume.">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖨</text></svg>">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script>
+    // Heavy handed warn removal for MVPs
+    console.warn = () => {};
+    // PostHog Init
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_iHTSJB41qmv87bAyL5ORU5KAoq1cZjlq1L972LnB739',{api_host:'https://app.posthog.com'})
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Overpass+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script>
+    // Tailwind Config
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            mono: ['Overpass Mono', 'ui-sans-serif', 'system-ui'],
+          },
+          listStyleType: {
+            square: 'square'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      font-size: 14px;
+    }
+    [x-cloak] {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body x-data="{ darkMode: false }" :class="darkMode === true ? 'dark' : 'light'" x-cloak class="bg-slate-600 text-slate-900 print:bg-white">
+  <div class="fixed flex items-center bottom-6 p-1.5 w-11/12 md:w-max left-1/2 -translate-x-1/2 text-slate-50 rounded-full bg-slate-900 border border-slate-600 bg-opacity-60 backdrop-blur shadow-md dark:shadow-slate-50/10 print:hidden">
+    <!-- <button class="flex flex-grow items-center justify-center text-sm text-slate-900 p-3 rounded-full mr-1.5  bg-slate-50">
+      <svg class="w-5 h-full mr-1.5" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M7 18H17V16H7V18Z" fill="currentColor"></path><path d="M17 14H7V12H17V14Z" fill="currentColor"></path><path d="M7 10H11V8H7V10Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor"></path></svg>
+      Resume
+    </button> -->
+    <a href="https://martinmark.com" class="flex flex-grow items-center justify-center text-sm p-3 rounded-full hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
+      <svg class="w-5 h-full mr-1.5" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M15.6396 7.02527H12.0181V5.02527H19.0181V12.0253H17.0181V8.47528L12.1042 13.3892L10.6899 11.975L15.6396 7.02527Z" fill="currentColor"></path><path d="M10.9819 6.97473H4.98193V18.9747H16.9819V12.9747H14.9819V16.9747H6.98193V8.97473H10.9819V6.97473Z" fill="currentColor"></path></svg>
+      Homepage
+    </a>
+    <a href="./martinmark-resume.pdf" target="_new" class="flex flex-grow items-center justify-center text-sm p-3 rounded-full mr-1.5 hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
+      <svg class="w-5 h-full mr-1.5" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M11 5C11 4.44772 11.4477 4 12 4C12.5523 4 13 4.44772 13 5V12.1578L16.2428 8.91501L17.657 10.3292L12.0001 15.9861L6.34326 10.3292L7.75748 8.91501L11 12.1575V5Z" fill="currentColor"></path><path d="M4 14H6V18H18V14H20V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V14Z" fill="currentColor"></path></svg>
+      PDF
+    </a>
+    <div class="h-8 mx-2 border-r border-slate-400 dark:border-slate-600"></div>
+    <button @click="darkMode = !darkMode" class="flex items-center justify-center text-sm p-3 rounded-full mr-1.5  hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
+      <svg x-show="!darkMode" class="w-5 h-full text-amber-300" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11 0H13V4.06189C12.6724 4.02104 12.3387 4 12 4C11.6613 4 11.3276 4.02104 11 4.06189V0ZM7.0943 5.68018L4.22173 2.80761L2.80752 4.22183L5.6801 7.09441C6.09071 6.56618 6.56608 6.0908 7.0943 5.68018ZM4.06189 11H0V13H4.06189C4.02104 12.6724 4 12.3387 4 12C4 11.6613 4.02104 11.3276 4.06189 11ZM5.6801 16.9056L2.80751 19.7782L4.22173 21.1924L7.0943 18.3198C6.56608 17.9092 6.09071 17.4338 5.6801 16.9056ZM11 19.9381V24H13V19.9381C12.6724 19.979 12.3387 20 12 20C11.6613 20 11.3276 19.979 11 19.9381ZM16.9056 18.3199L19.7781 21.1924L21.1923 19.7782L18.3198 16.9057C17.9092 17.4339 17.4338 17.9093 16.9056 18.3199ZM19.9381 13H24V11H19.9381C19.979 11.3276 20 11.6613 20 12C20 12.3387 19.979 12.6724 19.9381 13ZM18.3198 7.0943L21.1923 4.22183L19.7781 2.80762L16.9056 5.6801C17.4338 6.09071 17.9092 6.56608 18.3198 7.0943Z" fill="currentColor"></path></svg>
+      <svg x-show="darkMode" class="w-5 h-full text-violet-300" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.2256 2.00253C9.59172 1.94346 6.93894 2.9189 4.92893 4.92891C1.02369 8.83415 1.02369 15.1658 4.92893 19.071C8.83418 22.9763 15.1658 22.9763 19.0711 19.071C21.0811 17.061 22.0565 14.4082 21.9975 11.7743C21.9796 10.9772 21.8669 10.1818 21.6595 9.40643C21.0933 9.9488 20.5078 10.4276 19.9163 10.8425C18.5649 11.7906 17.1826 12.4053 15.9301 12.6837C14.0241 13.1072 12.7156 12.7156 12 12C11.2844 11.2844 10.8928 9.97588 11.3163 8.0699C11.5947 6.81738 12.2094 5.43511 13.1575 4.08368C13.5724 3.49221 14.0512 2.90664 14.5935 2.34046C13.8182 2.13305 13.0228 2.02041 12.2256 2.00253ZM17.6569 17.6568C18.9081 16.4056 19.6582 14.8431 19.9072 13.2186C16.3611 15.2643 12.638 15.4664 10.5858 13.4142C8.53361 11.362 8.73568 7.63895 10.7814 4.09281C9.1569 4.34184 7.59434 5.09193 6.34315 6.34313C3.21895 9.46732 3.21895 14.5326 6.34315 17.6568C9.46734 20.781 14.5327 20.781 17.6569 17.6568Z" fill="currentColor"></path></svg>
+    </button>
+  </div>
+
+  <div class="flex justify-center w-full">
+    <div class="bg-slate-50 shadow-lg w-full p-6 pb-28 xl:pb-6 xl:w-1/2 xl:rounded-sm xl:mt-12 xl:mb-28 dark:bg-slate-900 print:bg-white print:shadow-none">
+      <div class="block sm:flex items-center mb-3">
+        <div class="dark:text-slate-50 mb-1 sm:mb-0">
+          <h1 class="text-2xl">Martin Mark</h1>
+          <p class="text-slate-600 text-sm dark:text-slate-400">Product Design & Direction</p>  
+        </div>  
+        <div class="flex items-center ml-auto font-mono font-medium text-xs dark:text-slate-50">
+          <div class="flex items-center mr-6">
+            <svg class="w-4 h-full mr-1.5" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.00977 5.83789C3.00977 5.28561 3.45748 4.83789 4.00977 4.83789H20C20.5523 4.83789 21 5.28561 21 5.83789V17.1621C21 18.2667 20.1046 19.1621 19 19.1621H5C3.89543 19.1621 3 18.2667 3 17.1621V6.16211C3 6.11449 3.00333 6.06765 3.00977 6.0218V5.83789ZM5 8.06165V17.1621H19V8.06199L14.1215 12.9405C12.9499 14.1121 11.0504 14.1121 9.87885 12.9405L5 8.06165ZM6.57232 6.80554H17.428L12.7073 11.5263C12.3168 11.9168 11.6836 11.9168 11.2931 11.5263L6.57232 6.80554Z" fill="currentColor"></path></svg>
+            <p class="mt-0.5">martin@martinmark.com</p>  
+          </div>
+          <div class="flex items-center">
+            <svg class="w-4 h-full mr-1.5" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M22 12C22 10.6868 21.7413 9.38647 21.2388 8.1731C20.7362 6.95996 19.9997 5.85742 19.0711 4.92896C18.1425 4.00024 17.0401 3.26367 15.8268 2.76123C14.6136 2.25854 13.3132 2 12 2V4C13.0506 4 14.0909 4.20703 15.0615 4.60889C16.0321 5.01099 16.914 5.60034 17.6569 6.34326C18.3997 7.08594 18.989 7.96802 19.391 8.93848C19.7931 9.90918 20 10.9495 20 12H22Z" fill="currentColor"></path><path d="M2 10V5C2 4.44775 2.44772 4 3 4H8C8.55228 4 9 4.44775 9 5V9C9 9.55225 8.55228 10 8 10H6C6 14.4182 9.58173 18 14 18V16C14 15.4478 14.4477 15 15 15H19C19.5523 15 20 15.4478 20 16V21C20 21.5522 19.5523 22 19 22H14C7.37259 22 2 16.6274 2 10Z" fill="currentColor"></path><path d="M17.5433 9.70386C17.8448 10.4319 18 11.2122 18 12H16.2C16.2 11.4485 16.0914 10.9023 15.8803 10.3928C15.6692 9.88306 15.3599 9.42017 14.9698 9.03027C14.5798 8.64014 14.1169 8.33081 13.6073 8.11963C13.0977 7.90869 12.5515 7.80005 12 7.80005V6C12.7879 6 13.5681 6.15527 14.2961 6.45679C15.024 6.7583 15.6855 7.2002 16.2426 7.75732C16.7998 8.31445 17.2418 8.97583 17.5433 9.70386Z" fill="currentColor"></path></svg>
+            <p>+1 365-602-2664</p>
+          </div>
+        </div>
+      </div>
+      <hr class="border-t border-slate-900 mb-6 dark:border-slate-50" />
+
+      <div class="mb-6">
+        <div class="flex items-center text-xs text-slate-600 uppercase tracking-widest mb-1.5 font-medium font-mono dark:text-slate-400">
+          <div class="w-3 border-t border-slate-600 mr-1.5 dark:border-slate-400"></div>
+          <p class="mt-0.5">Since 2020</p>
+        </div>
+        <h2 class="text-xl dark:text-slate-50">Head of Product Design at Hasura</h2>
+      </div>
+
+      <div class="grid md:grid-cols-12 print:grid-cols-12 gap-12">
+        <div class="md:col-span-7 print:col-span-7">
+          <div class="flex items-center text-xs text-slate-600 uppercase tracking-widest mb-1.5 font-medium font-mono dark:text-slate-400">
+            <div class="w-3 border-t border-slate-600 mr-1.5 dark:border-slate-400"></div>
+            <p class="mt-0.5">Formerly</p>
+          </div>
+
+          <div class="mb-3">
+            <p class="dark:text-slate-50">Forma AI</p>
+            <div class="flex items-center font-mono font-medium text-xs dark:text-slate-50">
+              <div class="w-3 h-3 mr-1.5 rounded-full border border-slate-900 dark:border-slate-400"></div>
+              <p class="mt-0.5">Director, Product</p>
+              <p class="ml-auto mt-0.5">2019 - 2020</p>
+            </div>
+            <ul class="text-slate-600 text-sm list-square pl-4 mt-1.5 dark:text-slate-400">
+              <li>Led the product team for our compensation optimization and processing platform.</li>
+              <li>Re-aligned the company's product roadmap through client interviews and user testing.</li>
+              <li>Led efforts for design-based prototyping to validate our upcoming offerings.</li>
+              <li>Worked on streamlining processes and creating re-usable technical systems (data integration, task queue, design system).</li>
+              <li>Worked on packaging the product for the team's fundraise which led to a $5M Series A.</li>
+            </ul>
+          </div>
+
+          <div class="mb-3">
+            <p class="dark:text-slate-50">Rubikloud</p>
+            <div class="flex items-center font-mono font-medium text-xs dark:text-slate-50">
+              <div class="w-3 h-3 mr-1.5 rounded-full border border-slate-900 dark:border-slate-400"></div>
+              <p class="mt-0.5">UX Director</p>
+              <p class="ml-auto mt-0.5">2017 - 2019</p>
+            </div>
+            <div class="border-l border-slate-900 ml-[0.35rem] h-1.5 dark:border-slate-400"></div>
+            <div class="flex items-center font-mono font-medium text-xs dark:text-slate-50">
+              <div class="w-3 h-3 mr-1.5 rounded-full border border-slate-900 dark:border-slate-400"></div>
+              <p class="mt-0.5">Senior UX Designer</p>
+              <p class="ml-auto mt-0.5">2015 - 2017</p>
+            </div>
+            <ul class="text-slate-600 text-sm list-square pl-4 mt-1.5 dark:text-slate-400">
+              <li>Led the UX design team for a retail data science startup.</li>
+              <li>Hired and grew the design team while balancing product, engineering, and budget demands.</li>
+              <li>Led the buildout of a code-driven style guide and prototyping systems used within the design team.</li>
+              <li>Conducted user testing and experimentation with stakeholders to validate designs.</li>
+            </ul>
+          </div>
+
+          <div class="mb-3">
+            <p class="dark:text-slate-50">Freelance</p>
+            <div class="flex items-center font-mono font-medium text-xs dark:text-slate-50">
+              <div class="w-3 h-3 mr-1.5 rounded-full border border-slate-900 dark:border-slate-400"></div>
+              <p class="mt-0.5">Product Designer</p>
+              <p class="ml-auto mt-0.5">2013 - 2014</p>
+            </div>
+            <ul class="text-slate-600 text-sm list-square pl-4 mt-1.5 dark:text-slate-400">
+              <li>Led the design and development of a B2C e-commerce website in the healthcare space which generated more than $5M ARR.</li>
+              <li>Designed new product features for a number of startups such as BreakingData, PlateIQ, and SearchYourCloud.</li>
+              <li>Drove agency contracts for StackAdapt and PaintNite's marketing sites.</li>
+              <li>Completed sales and investment presentation preparation contracts for iHeartRadio and Keek.</li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="dark:text-slate-50">ReachStreet</p>
+            <div class="flex items-center font-mono font-medium text-xs dark:text-slate-50">
+              <div class="w-3 h-3 mr-1.5 rounded-full border border-slate-900 dark:border-slate-400"></div>
+              <p class="mt-0.5">UX Team Lead</p>
+              <p class="ml-auto mt-0.5">2011 - 2013</p>
+            </div>
+            <div class="border-l border-slate-900 ml-[0.35rem] h-1.5 dark:border-slate-400"></div>
+            <div class="flex items-center font-mono font-medium text-xs dark:text-slate-50">
+              <div class="w-3 h-3 mr-1.5 rounded-full border border-slate-900 dark:border-slate-400"></div>
+              <p class="mt-0.5">UX Designer</p>
+              <p class="ml-auto mt-0.5">2010 - 2011</p>
+            </div>
+            <ul class="text-slate-600 text-sm list-square pl-4 mt-1.5 dark:text-slate-400">
+              <li>Led the design team in the production of the company's location-based trivia application.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 print:col-span-5">
+          <div class="flex items-center text-xs text-slate-600 uppercase tracking-widest mb-1.5 font-medium font-mono dark:text-slate-400">
+            <div class="w-3 border-t border-slate-600 mr-1.5 dark:border-slate-400"></div>
+            <p class="mt-0.5">Skills</p>
+          </div>
+          <div class="mb-6">
+            <p class="text-slate-600 text-sm mb-1.5 dark:text-slate-400">Management</p>
+            <div class="flex flex-wrap mb-1.5">
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Project Management</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">KPIs & Planning</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Design Ops</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Career Coaching</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Hiring</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Performance Management</p>
+            </div> 
+
+            <p class="text-slate-600 text-sm mb-1.5 dark:text-slate-400">Design</p>
+            <div class="flex flex-wrap mb-1.5">
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Figma</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Axure</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Sketch</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Photoshop</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">User Interviews</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Analytics</p>
+            </div> 
+
+            <p class="text-slate-600 text-sm mb-1.5 dark:text-slate-400">Code</p>
+            <div class="flex flex-wrap mb-1.5">
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">HTML / CSS</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">JS</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Tailwind</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">AlpineJS</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Svelte</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Python</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Git</p>
+              <p class="flex items-center rounded-sm bg-slate-200 h-7 px-2 text-sm w-max mr-1.5 mb-1.5 dark:text-slate-50 dark:bg-slate-700">Wordpress</p>
+            </div>
+          </div>
+
+          <div class="flex items-center text-xs text-slate-600 uppercase tracking-widest mb-1.5 -mt-1.5 font-medium font-mono dark:text-slate-400">
+            <div class="w-3 border-t border-slate-600 mr-1.5 dark:border-slate-400"></div>
+            <p class="mt-0.5">Extracurriculars</p>
+          </div>
+
+          <!-- <div class="mb-3">
+            <p class="dark:text-slate-50">HasuraCon '22 MC</p>
+            <div class="flex items-center font-mono font-medium text-xs mt-0.5 dark:text-slate-50">
+              <p class="">Hasura</p>
+              <p class="ml-auto">2022</p>
+            </div>
+          </div> -->
+
+          <div class="mb-3">
+            <p class="dark:text-slate-50">Method and system for generation of adjustable automated forecasts for&nbsp;a&nbsp;promotion</p>
+            <div class="flex items-center font-mono font-medium text-xs mt-0.5 dark:text-slate-50">
+              <p class="">Rubikloud, Patent Co-Author</p>
+              <p class="ml-auto">2018</p>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <p class="dark:text-slate-50">Advanced Data Visualization (DS008)</p>
+            <div class="flex items-center font-mono font-medium text-xs mt-0.5 dark:text-slate-50">
+              <p class="">Toronto Metropolitan University</p>
+              <p class="ml-auto">2017/18</p>
+            </div>
+            <p class="text-slate-600 text-sm mt-1.5 dark:text-slate-400"> 
+              Guest speaker: data visualization in the&nbsp;enterprise
+            </p>
+          </div>
+
+          <div class="flex items-center text-xs text-slate-600 uppercase tracking-widest mb-1.5 font-medium font-mono dark:text-slate-400">
+            <div class="w-3 border-t border-slate-600 mr-1.5 dark:border-slate-400"></div>
+            <p class="mt-0.5">Other Work</p>
+          </div>
+          <ul class="text-slate-600 text-sm list-square pl-4 mt-1.5 dark:text-slate-400">
+            <li>2 years of implementation plan, workflow documentation, and QA for ThreePointTurn and TRO Maintenance Management</li>
+            <li>1.5 years of onsite contract cabling, networking, workstation, and MS Server support for PC&nbsp;Mechanix</li>
+          </ul>
+
+        </div>
+      </div>  
+    </div>
+  </div>
+</body>
+</html>
