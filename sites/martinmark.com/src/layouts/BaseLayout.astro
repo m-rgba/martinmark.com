@@ -1,18 +1,18 @@
 ---
-const { title, emoji } = Astro.props;
+const { title, description, emoji = "🍕" } = Astro.props;
+const favicon = "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>" + emoji + "</text></svg>"
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">    
+	<link rel="icon" href={favicon}>    
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <meta name="generator" content={Astro.generator} />
   <title>{title} {title ? '-' : null} Martin Mark - Product Design & Direction</title>
-	<meta name="description" content="">
+	<meta name="description" content={description}>
   <script is:inline>
     var uiState = () => {
       return {
@@ -41,11 +41,11 @@ const { title, emoji } = Astro.props;
 
 <body x-data="uiState()" x-init="getCurrentTheme()" x-cloak :class="darkMode === true ? 'dark' : 'light'" class="text-slate-900 print:bg-white">
   <div class="fixed z-50 flex items-center bottom-3.5 sm:bottom-[4.5rem] p-1.5 w-max left-1/2 -translate-x-1/2 text-slate-50 rounded-lg sm:rounded-full border border-slate-600 bg-slate-900 bg-opacity-60 backdrop-blur shadow-md dark:shadow-slate-50/10 print:hidden">
-    <a href="/work" class="flex flex-grow items-center justify-center text-sm p-3 rounded-full hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
+    <a href="/work" class="flex flex-grow items-center justify-center text-sm p-3 rounded-lg sm:rounded-full hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
       <svg class="w-5 h-full mr-1.5" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M13.4 2.096a10.08 10.08 0 0 0-8.937 3.331A10.054 10.054 0 0 0 2.096 13.4c.53 3.894 3.458 7.207 7.285 8.246a9.982 9.982 0 0 0 2.618.354l.142-.001a3.001 3.001 0 0 0 2.516-1.426 2.989 2.989 0 0 0 .153-2.879l-.199-.416a1.919 1.919 0 0 1 .094-1.912 2.004 2.004 0 0 1 2.576-.755l.412.197c.412.198.85.299 1.301.299A3.022 3.022 0 0 0 22 12.14a9.935 9.935 0 0 0-.353-2.76c-1.04-3.826-4.353-6.754-8.247-7.284zm5.158 10.909-.412-.197c-1.828-.878-4.07-.198-5.135 1.494-.738 1.176-.813 2.576-.204 3.842l.199.416a.983.983 0 0 1-.051.961.992.992 0 0 1-.844.479h-.112a8.061 8.061 0 0 1-2.095-.283c-3.063-.831-5.403-3.479-5.826-6.586-.321-2.355.352-4.623 1.893-6.389a8.002 8.002 0 0 1 7.16-2.664c3.107.423 5.755 2.764 6.586 5.826.198.73.293 1.474.282 2.207-.012.807-.845 1.183-1.441.894z"></path><circle cx="7.5" cy="14.5" r="1.5"></circle><circle cx="7.5" cy="10.5" r="1.5"></circle><circle cx="10.5" cy="7.5" r="1.5"></circle><circle cx="14.5" cy="7.5" r="1.5"></circle></svg>
       <p>Work</p>
     </a>
-    <a href="/cv" class="flex flex-grow items-center justify-center text-sm p-3 rounded-full hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
+    <a href="/cv" class="flex flex-grow items-center justify-center text-sm p-3 rounded-lg sm:rounded-full hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
       <svg class="w-5 h-full mr-1.5" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
       <p>CV</p>
     </a>
@@ -73,7 +73,7 @@ const { title, emoji } = Astro.props;
           <p>GitHub</p>
         </a>
       </div>
-      <div @click="socialOpen = !socialOpen" class="cursor-pointer flex flex-grow items-center justify-center text-sm p-3 rounded-full hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
+      <div @click="socialOpen = !socialOpen" class="cursor-pointer flex flex-grow items-center justify-center text-sm p-3 rounded-lg sm:rounded-full hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
         <p>Social</p>
         <svg x-show="!socialOpen" class="-rotate-90 w-5 h-full ml-1.5" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
@@ -84,7 +84,7 @@ const { title, emoji } = Astro.props;
       </div>
     </div>
     <div class="h-8 mx-2 border-r border-slate-50 opacity-50"></div>
-    <button @click="toggleDarkMode()" class="flex items-center justify-center text-sm p-3 rounded-full mr-1.5 hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
+    <button @click="toggleDarkMode()" class="flex items-center justify-center text-sm p-3 rounded-lg sm:rounded-full mr-1.5 hover:bg-slate-900/50 dark:hover:bg-slate-50/20">
       <svg x-show="!darkMode" class="w-5 h-full text-amber-300" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" fill="currentColor"></path>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0H13V4.06189C12.6724 4.02104 12.3387 4 12 4C11.6613 4 11.3276 4.02104 11 4.06189V0ZM7.0943 5.68018L4.22173 2.80761L2.80752 4.22183L5.6801 7.09441C6.09071 6.56618 6.56608 6.0908 7.0943 5.68018ZM4.06189 11H0V13H4.06189C4.02104 12.6724 4 12.3387 4 12C4 11.6613 4.02104 11.3276 4.06189 11ZM5.6801 16.9056L2.80751 19.7782L4.22173 21.1924L7.0943 18.3198C6.56608 17.9092 6.09071 17.4338 5.6801 16.9056ZM11 19.9381V24H13V19.9381C12.6724 19.979 12.3387 20 12 20C11.6613 20 11.3276 19.979 11 19.9381ZM16.9056 18.3199L19.7781 21.1924L21.1923 19.7782L18.3198 16.9057C17.9092 17.4339 17.4338 17.9093 16.9056 18.3199ZM19.9381 13H24V11H19.9381C19.979 11.3276 20 11.6613 20 12C20 12.3387 19.979 12.6724 19.9381 13ZM18.3198 7.0943L21.1923 4.22183L19.7781 2.80762L16.9056 5.6801C17.4338 6.09071 17.9092 6.56608 18.3198 7.0943Z" fill="currentColor"></path>

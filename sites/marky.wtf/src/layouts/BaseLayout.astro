@@ -1,5 +1,5 @@
 ---
-const { title, emoji } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ const { title, emoji } = Astro.props;
   <link rel="stylesheet" href="/assets/fonts/fonts.css">
   <meta name="generator" content={Astro.generator} />
   <title>{title} {title ? '-' : null} Martin Mark - Product Design & Direction</title>
-	<meta name="description" content="">
+	<meta name="description" content="{description}">
   <script is:inline>
     var uiState = () => {
       return {
