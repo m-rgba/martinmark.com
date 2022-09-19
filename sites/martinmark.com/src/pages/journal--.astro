@@ -1,6 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const getPosts = await Astro.glob('./journal/*.md');
 ---
+
+{getPosts.map(post => <li>{post.frontmatter.title}</li>)}
+
 
 <BaseLayout title="Work" emoji="🎨" description="A sampling of some of my product design and user experience work, and a history of where I've worked and what I've done over the course of my career.">
   <div class="p-6">
@@ -35,7 +39,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </div>
 
-  <div class="mx-auto max-w-6xl">
+  <div class="mx-auto max-w-7xl">
     <div class="px-6">
       <div class="sm:px-12">
         <div class="absolute rounded-full bg-slate-600 w-4 h-4 z-20"></div>
@@ -49,10 +53,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="absolute top-0 rounded-full bg-white border border-slate-300 w-4 h-4 -mt-2 z-10 dark:bg-slate-900 dark:border-slate-600"></div>
         <div class="absolute top-0 ml-[0.45rem] border-l border-slate-300 w-1 h-full dark:border-slate-600"></div>
         <div class="pl-12 w-full">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
             <div class="">
               <h1 class="text-xl sm:text-2xl leading-tight mb-1.5 dark:text-slate-50">Hasura</h1>
-              <p class="font-mono font-medium uppercase text-slate-600 text-xs mb-3 dark:text-slate-50">Head of Product Design (2020 - Current)</p>
+              <p class="font-mono font-medium text-slate-600 text-xs mb-3 dark:text-slate-50">Head of Product Design (2020 - Current)</p>
               <p class="dark:text-slate-400 mb-3">
                 Hasura is an open source platform which helps developers make their data sources accessible using GraphQL.
               </p>
@@ -60,7 +64,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 I work at Hasura as the Head of Product Design and specialize in improving the developer experience of our user-facing tools.
               </p>
             </div>
-            <div style="background-image: url('/assets/images/work/hasura-headline-temp.png'); background-size: cover;" class="h-96 w-full rounded-md border border-slate-200 overflow-hidden shadow-lg dark:border-slate-900" role="img" aria-label="Hasura Console settings with error messaging">
+            <div style="background-image: url('/assets/images/work/hasura-headline-temp.png'); background-size: cover;" class="h-96 w-full rounded-md border border-slate-200 col-span-2 overflow-hidden shadow-lg dark:border-slate-900" role="img" aria-label="Hasura Console settings with error messaging">
             </div>
           </div>
         </div>
@@ -78,27 +82,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="absolute top-0 rounded-full bg-white border border-slate-300 w-4 h-4 -mt-2 z-10 dark:bg-slate-900 dark:border-slate-600"></div>
         <div class="absolute top-0 ml-[0.45rem] border-l border-slate-300 w-1 h-full dark:border-slate-600"></div>
         <div class="pl-12 w-full">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
             <div class="">
               <h1 class="text-xl sm:text-2xl leading-tight mb-1.5 dark:text-slate-50">Forma AI</h1>
-              <p class="font-mono font-medium uppercase text-slate-600 text-xs mb-3 dark:text-slate-50">Director, Product & Design (2019 - 2020)</p>
+              <p class="font-mono font-medium text-slate-600 text-xs mb-3 dark:text-slate-50">Director, Product & Design (2019 - 2020)</p>
               <p class="dark:text-slate-400 mb-3">
                 Forma AI is a leader in the science of incentive compensation. Sales operations teams use Forma to design and optimize their sales plans, and automate them effectively.
               </p>
               <p class="dark:text-slate-400 mb-3">
-                I worked at Forma for a little more than a year as the Director of Product and Design.
+                I worked at Forma for a year as the Director of UX and Product.
               </p>
               <p class="dark:text-slate-400 mb-3">
-                As a product leader I concentrated on building our platform, reducing our cost of goods sold (COGS), and reducing time to realized value for customers.
-              </p>
-              <p class="dark:text-slate-400 mb-3">
-                I was also able to use my skills as a design leader to refresh the platform's design language to a reusable, component-based architecture which also helped us with achieving our product goals.
+                As a design leader I worked through pragmatically refreshing the platform's design based on customer interviews, surveys, and demonstrations.
               </p>
               <p class="dark:text-slate-400">
-                I had the opportunity to hire the first members of our team and create a foundation for our platform that could help us scale as an organization.
+                I had the opportunity to hire the first members of our team and worked together to create a foundation of components and layouts which could scale and evolve with the platform.
               </p>
             </div>
-            <div style="background-image: url('/assets/images/work/forma-headline.jpeg'); background-size: cover;" class="h-96 w-full rounded-md border border-slate-200 overflow-hidden shadow-lg dark:border-slate-900" role="img" aria-label="Forma AI chart dashboard">
+            <div style="background-image: url('/assets/images/work/forma-headline.jpeg'); background-size: cover;" class="h-96 w-full rounded-md border border-slate-200 col-span-2 overflow-hidden shadow-lg dark:border-slate-900" role="img" aria-label="Forma AI chart dashboard">
             </div>
           </div>
           <div class=" grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -122,11 +123,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="absolute top-0 rounded-full bg-white border border-slate-300 w-4 h-4 -mt-2 z-10 dark:bg-slate-900 dark:border-slate-600"></div>
         <div class="absolute top-0 ml-[0.45rem] border-l border-slate-300 w-1 h-full dark:border-slate-600"></div>
         <div class="pl-12 w-full">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
             <div class="">
               <h1 class="text-xl sm:text-2xl leading-tight mb-1.5 dark:text-slate-50">Rubikloud</h1>
-              <p class="font-mono uppercase font-medium text-slate-600 text-xs mb-0.5 dark:text-slate-50">UX Director (2017 - 2019)</p>
-              <p class="font-mono uppercase font-medium text-slate-600 text-xs mb-3 dark:text-slate-50">Senior UX Designer (2015 - 2017)</p>
+              <p class="font-mono font-medium text-slate-600 text-xs mb-0.5 dark:text-slate-50">UX Director (2017 - 2019)</p>
+              <p class="font-mono font-medium text-slate-600 text-xs mb-3 dark:text-slate-50">Senior UX Designer (2015 - 2017)</p>
               <p class="dark:text-slate-400 mb-3">
                 Rubikloud is a data science company which revolved around creating actionable data oriented solutions for enterprise retailers.
               </p>
@@ -140,7 +141,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 And then as a design leader I had the opportunity to work on ironing out our design processes, hiring and nurturing to create an effective team, and advocating for testing-driven driven design within the organization.
               </p>
             </div>
-            <div style="background-image: url('/assets/images/work/rubikloud-headline.jpeg'); background-size: cover;" class="h-96 w-full rounded-md border border-slate-200 overflow-hidden shadow-lg dark:border-slate-900" role="img" aria-label="Rubikloud data dashboard">
+            <div style="background-image: url('/assets/images/work/rubikloud-headline.jpeg'); background-size: cover;" class="h-96 w-full rounded-md border border-slate-200 col-span-2 overflow-hidden shadow-lg dark:border-slate-900" role="img" aria-label="Rubikloud data dashboard">
             </div>
           </div>
           <div class=" grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -165,7 +166,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="absolute top-0 ml-[0.45rem] border-l border-slate-300 w-1 h-full dark:border-slate-600"></div>
         <div class="pl-12 w-full">
           <h1 class="text-xl sm:text-2xl leading-tight mb-1.5 dark:text-slate-50">Freelance</h1>
-          <p class="font-mono uppercase font-medium text-slate-600 text-xs mb-3 dark:text-slate-50">Product Design Lead (2014)</p>
+          <p class="font-mono font-medium text-slate-600 text-xs mb-3 dark:text-slate-50">Product Design Lead (2014)</p>
 
           <p class="mb-6 dark:text-slate-400">In 2014 I worked for a year as a freelance design lead. <br /> I had the opportunity
             to work with a number of great companies.</p>
@@ -239,7 +240,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="pl-12 w-full">
 
           <h1 class="text-xl sm:text-2xl leading-tight mb-1.5 dark:text-slate-50">Early Work</h1>
-          <p class="font-mono uppercase font-medium text-slate-600 text-xs mb-3 dark:text-slate-50">UX Designer (2011 - 2013)</p>
+          <p class="font-mono font-medium text-slate-600 text-xs mb-3 dark:text-slate-50">UX Designer (2011 - 2013)</p>
 
           <p class="mb-6 dark:text-slate-400">Early on in my career I worked on a social gaming startup which melded the
             real world with virtual games and achievements.</p>
